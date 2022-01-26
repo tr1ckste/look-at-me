@@ -134,29 +134,29 @@
     </div>
     <div class="chat-wrapper">
       <v-icon id="chat-button" @click="drawer = !drawer">mdi-message</v-icon>
-         <v-navigation-drawer 
-          v-model="drawer" 
-          floating 
-          right
-          width="300" 
-          app id="chat">
-            <div style="overflow: scroll; width: 100%; margin-bottom: 100px">
-              <Message v-for="(msg, index) in messages" :key="index" :name="msg.name" :msg="msg.msg"/>
-            </div>
-            <div class="message-input" style="height: 100px; background-color: #363636">
-              <v-text-field
-              style="margin-bottom: 40px"
-              class="ma-3"
-              v-model="text"
-              outlined
-              append-icon="mdi-send"
-              @click:append="sendMessageToChat"
-              clearable
-              label="Message"
-              type="text"
-            />
-            </div>
-         </v-navigation-drawer>
+        <v-navigation-drawer 
+        v-model="drawer" 
+        floating 
+        right
+        width="300" 
+        app id="chat">
+          <div style="overflow: scroll; width: 100%; margin-bottom: 100px">
+            <Message v-for="(msg, index) in messages" :key="index" :name="msg.name" :msg="msg.msg"/>
+          </div>
+          <div class="message-input" style="height: 100px; background-color: #363636">
+            <v-text-field
+            style="margin-bottom: 40px"
+            class="ma-3"
+            v-model="text"
+            outlined
+            append-icon="mdi-send"
+            @click:append="sendMessageToChat"
+            clearable
+            label="Message"
+            type="text"
+          />
+          </div>
+        </v-navigation-drawer>
     </div>
 
     <NotificationSnackbar
